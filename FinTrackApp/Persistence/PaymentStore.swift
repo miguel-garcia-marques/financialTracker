@@ -21,6 +21,38 @@ final class PaymentStore {
         try context.save()
     }
 
+    func createApplePayShortcutDraft(
+        transaction: String?,
+        cardOrPass: String?,
+        merchant: String?,
+        amount: String?,
+        name: String?,
+        triggeredAt: Date = .now
+    ) throws -> Payment {
+        let context = context
+        let payment = PaymentDraftFactory.applePayShortcutDraft(
+            transaction: transaction,
+            cardOrPass: cardOrPass,
+            merchant: merchant,
+            amount: amount,
+            name: name,
+            triggeredAt: triggeredAt
+        )
+
+        if let cardLabel = cardOrPass?.trimmedNilIfEmpty {
+            let methods = try context.fetch(FetchDescriptor<PaymentMethod>())
+            if let method = methods.first(where: { $0.isActive && $0.matches(shortcutCardLabel: cardLabel) }) {
+                payment.paymentMethod = method
+                payment.bank = method.bank
+                payment.bankName = method.bank?.displayName
+            }
+        }
+
+        context.insert(payment)
+        try context.save()
+        return payment
+    }
+
     func payments(includeDiscarded: Bool = false) throws -> [Payment] {
         let descriptor = FetchDescriptor<Payment>(
             sortBy: [SortDescriptor(\.transactionAt, order: .reverse)]

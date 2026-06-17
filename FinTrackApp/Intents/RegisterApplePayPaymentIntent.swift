@@ -23,15 +23,13 @@ struct RegisterApplePayPaymentIntent: AppIntent {
 
     @MainActor
     func perform() async throws -> some IntentResult & ProvidesDialog {
-        let payment = PaymentDraftFactory.applePayShortcutDraft(
+        let payment = try PaymentStore.shared.createApplePayShortcutDraft(
             transaction: transaction,
             cardOrPass: cardOrPass,
             merchant: merchant,
             amount: amount,
             name: name
         )
-
-        try PaymentStore.shared.create(payment)
 
         let merchantText = payment.merchantName ?? payment.transactionName ?? "pagamento"
         let amountText = payment.amount?.formatted(.currency(code: payment.currency)) ?? "montante por preencher"
