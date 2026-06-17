@@ -79,6 +79,19 @@ possa ser revisto e merged sem surpresas.
 
 ## Redução De Tokens E Créditos
 
+- Usar `rtk` quando estiver disponível para reduzir output antes de entrar no
+  contexto do agente. Exemplos úteis:
+  - `rtk tree`
+  - `rtk read caminho/do/ficheiro`
+  - `rtk git status`
+  - `rtk git diff`
+  - `rtk gh pr view <PR> --json number,title,body,baseRefName,headRefName`
+  - `rtk test <comando-de-testes>`
+  - `rtk err <comando>`
+- Preferir wrappers `rtk` para comandos com output grande ou repetitivo,
+  especialmente `git`, `gh`, testes, logs, árvores de ficheiros e diffs.
+- Não usar `rtk run` por defeito, porque executa comandos sem filtragem; usar só
+  quando for necessário preservar output bruto.
 - Ler primeiro os ficheiros estritamente necessários. Evitar abrir documentos
   longos completos quando `rg`, `git diff --stat`, `sed -n` ou `gh ... --json`
   dão contexto suficiente.
