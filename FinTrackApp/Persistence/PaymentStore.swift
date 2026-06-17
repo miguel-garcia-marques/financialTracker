@@ -30,6 +30,21 @@ final class PaymentStore {
         return payments.filter(\.isIncludedInFinancialTotals)
     }
 
+    func payment(id: UUID) throws -> Payment? {
+        let descriptor = FetchDescriptor<Payment>(
+            predicate: #Predicate { payment in
+                payment.id == id
+            }
+        )
+        return try context.fetch(descriptor).first
+    }
+
+    func update(_ payment: Payment, mutate: (Payment) -> Void) throws {
+        mutate(payment)
+        payment.touch()
+        try context.save()
+    }
+
     func delete(_ payment: Payment) throws {
         let context = context
         context.delete(payment)

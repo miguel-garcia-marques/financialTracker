@@ -56,7 +56,8 @@ struct DraftReviewView: View {
     }
 
     private func confirm() {
-        payment.status = payment.amount == nil || payment.merchantName == nil ? .needsReconciliation : .pendingEnrichment
+        let nextStatus: PaymentStatus = payment.amount == nil || payment.merchantName == nil ? .needsReconciliation : .pendingEnrichment
+        payment.confirm(as: nextStatus)
         try? modelContext.save()
         dismiss()
     }
@@ -68,7 +69,7 @@ struct DraftReviewView: View {
     }
 
     private func discard() {
-        payment.status = .discarded
+        payment.discard()
         try? modelContext.save()
         dismiss()
     }

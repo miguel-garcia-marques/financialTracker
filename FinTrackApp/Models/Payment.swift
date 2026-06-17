@@ -148,4 +148,37 @@ final class Payment {
     var isIncludedInFinancialTotals: Bool {
         status != .discarded && status != .ignored && status != .duplicate
     }
+
+    var structuredNotes: [String: String] {
+        get { (try? JSONDecoder().decode([String: String].self, from: structuredNotesData)) ?? [:] }
+        set {
+            structuredNotesData = (try? JSONEncoder().encode(newValue)) ?? Data("{}".utf8)
+            touch()
+        }
+    }
+
+    var rawPayload: [String: String] {
+        get { (try? JSONDecoder().decode([String: String].self, from: rawPayloadData)) ?? [:] }
+        set {
+            rawPayloadData = (try? JSONEncoder().encode(newValue)) ?? Data("{}".utf8)
+            touch()
+        }
+    }
+
+    func touch(now: Date = .now) {
+        updatedAt = now
+    }
+
+    func confirm(as newStatus: PaymentStatus, now: Date = .now) {
+        status = newStatus
+        confirmedAt = confirmedAt ?? now
+        discardedAt = nil
+        updatedAt = now
+    }
+
+    func discard(now: Date = .now) {
+        status = .discarded
+        discardedAt = discardedAt ?? now
+        updatedAt = now
+    }
 }
