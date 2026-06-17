@@ -77,6 +77,33 @@ possa ser revisto e merged sem surpresas.
 - Depois de uma dependência fazer merge, atualizar o PR seguinte se a diff ou a
   base precisarem de limpeza, e só depois marcar como ready.
 
+## Redução De Tokens E Créditos
+
+- Ler primeiro os ficheiros estritamente necessários. Evitar abrir documentos
+  longos completos quando `rg`, `git diff --stat`, `sed -n` ou `gh ... --json`
+  dão contexto suficiente.
+- Preferir comandos focados:
+  - `rg "termo" caminho/`
+  - `git diff -- nome-do-ficheiro`
+  - `gh pr view <PR> --json number,title,body,baseRefName,headRefName`
+- Usar `rg --files` para descobrir ficheiros antes de ler conteúdo.
+- Evitar repetir leituras de ficheiros que acabaram de ser mostrados, salvo se
+  houve alterações.
+- Para PRs e issues, pedir apenas os campos JSON necessários em vez de texto
+  completo de CLI.
+- Antes de editar, resumir mentalmente o alvo e aplicar patches pequenos e
+  localizados. Evitar refactors amplos sem necessidade do issue.
+- Quando houver vários comandos independentes de leitura, executá-los em
+  paralelo para reduzir tempo de interação.
+- Não correr builds/testes repetidamente sem mudança relevante. Validar depois
+  de um conjunto coerente de alterações.
+- Se um build completo for caro e a alteração for textual/docs-only, não correr
+  build; indicar no PR que a validação foi revisão textual.
+- Evitar gerar artefactos grandes ou screenshots salvo quando forem necessários
+  para validar UI, layout ou execução.
+- Nas respostas finais, reportar só o essencial: PRs, issues, comandos de
+  validação e bloqueios. Não colar logs longos.
+
 ## Higiene Local
 
 - Manter outputs gerados fora dos commits.
