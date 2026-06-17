@@ -39,6 +39,34 @@ final class PaymentStore {
         return try context.fetch(descriptor).first
     }
 
+    func banks(includeInactive: Bool = false) throws -> [Bank] {
+        let descriptor = FetchDescriptor<Bank>(
+            sortBy: [SortDescriptor(\.displayName)]
+        )
+        let banks = try context.fetch(descriptor)
+        return includeInactive ? banks : banks.filter(\.isActive)
+    }
+
+    func paymentMethods(includeInactive: Bool = false) throws -> [PaymentMethod] {
+        let descriptor = FetchDescriptor<PaymentMethod>(
+            sortBy: [SortDescriptor(\.displayName)]
+        )
+        let methods = try context.fetch(descriptor)
+        return includeInactive ? methods : methods.filter(\.isActive)
+    }
+
+    func paymentMethod(shortcutCardLabel: String) throws -> PaymentMethod? {
+        try paymentMethods().first { method in
+            method.matches(shortcutCardLabel: shortcutCardLabel)
+        }
+    }
+
+    func bank(matching value: String) throws -> Bank? {
+        try banks().first { bank in
+            bank.matches(value)
+        }
+    }
+
     func update(_ payment: Payment, mutate: (Payment) -> Void) throws {
         mutate(payment)
         payment.touch()

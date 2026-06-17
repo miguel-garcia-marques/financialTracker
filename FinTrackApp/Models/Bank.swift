@@ -39,4 +39,10 @@ final class Bank {
             updatedAt = .now
         }
     }
+
+    func matches(_ value: String) -> Bool {
+        let normalizedValue = value.normalizedMerchantName
+        let candidates = ([name, displayName] + aliases).map(\.normalizedMerchantName)
+        return candidates.contains(normalizedValue)
+    }
 }

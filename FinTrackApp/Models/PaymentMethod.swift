@@ -55,4 +55,9 @@ final class PaymentMethod {
             updatedAt = .now
         }
     }
+
+    func matches(shortcutCardLabel value: String) -> Bool {
+        guard let shortcutCardLabel else { return false }
+        return shortcutCardLabel.normalizedMerchantName == value.normalizedMerchantName
+    }
 }
