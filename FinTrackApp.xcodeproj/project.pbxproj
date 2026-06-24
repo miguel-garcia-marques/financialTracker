@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D0000010000000000000001 /* FinTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0000010000000000001001 /* FinTrackApp.swift */; };
+		4D0000010000000000000002 /* FinTrackModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0000010000000000001002 /* FinTrackModelContainer.swift */; };
+		4D0000010000000000000003 /* PaymentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0000010000000000001003 /* PaymentStore.swift */; };
+		4D0000010000000000000004 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0000010000000000001004 /* Payment.swift */; };
+		4D0000010000000000000005 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0000010000000000001005 /* Bank.swift */; };
+		4D0000010000000000000006 /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0000010000000000001006 /* PaymentMethod.swift */; };
+		4D0000010000000000000007 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0000010000000000001007 /* RootView.swift */; };
+		4D0000010000000000000008 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0000010000000000001008 /* TodayView.swift */; };
+		4D0000010000000000000009 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0000010000000000001009 /* HistoryView.swift */; };
+		4D000001000000000000000A /* DraftsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D000001000000000000100A /* DraftsView.swift */; };
+		4D000001000000000000000B /* PlaceholderViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D000001000000000000100B /* PlaceholderViews.swift */; };
+		4D000001000000000000000C /* PaymentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D000001000000000000100C /* PaymentRowView.swift */; };
+		4D000001000000000000000D /* PaymentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D000001000000000000100D /* PaymentDetailView.swift */; };
+		4D000001000000000000000E /* DraftReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D000001000000000000100E /* DraftReviewView.swift */; };
+		4D000001000000000000000F /* RegisterApplePayPaymentIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D000001000000000000100F /* RegisterApplePayPaymentIntent.swift */; };
+		4D0000010000000000000010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D0000010000000000001010 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4D0000010000000000001000 /* FinTrackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinTrackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D0000010000000000001001 /* FinTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinTrackApp.swift; sourceTree = "<group>"; };
+		4D0000010000000000001002 /* FinTrackModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinTrackModelContainer.swift; sourceTree = "<group>"; };
+		4D0000010000000000001003 /* PaymentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStore.swift; sourceTree = "<group>"; };
+		4D0000010000000000001004 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		4D0000010000000000001005 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
+		4D0000010000000000001006 /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
+		4D0000010000000000001007 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		4D0000010000000000001008 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		4D0000010000000000001009 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		4D000001000000000000100A /* DraftsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftsView.swift; sourceTree = "<group>"; };
+		4D000001000000000000100B /* PlaceholderViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderViews.swift; sourceTree = "<group>"; };
+		4D000001000000000000100C /* PaymentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRowView.swift; sourceTree = "<group>"; };
+		4D000001000000000000100D /* PaymentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailView.swift; sourceTree = "<group>"; };
+		4D000001000000000000100E /* DraftReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftReviewView.swift; sourceTree = "<group>"; };
+		4D000001000000000000100F /* RegisterApplePayPaymentIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterApplePayPaymentIntent.swift; sourceTree = "<group>"; };
+		4D0000010000000000001010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D0000010000000000002001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D0000010000000000003001 = {
+			isa = PBXGroup;
+			children = (
+				4D0000010000000000003002 /* FinTrackApp */,
+				4D0000010000000000003007 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4D0000010000000000003002 /* FinTrackApp */ = {
+			isa = PBXGroup;
+			children = (
+				4D0000010000000000001001 /* FinTrackApp.swift */,
+				4D0000010000000000003003 /* Models */,
+				4D0000010000000000003004 /* Persistence */,
+				4D0000010000000000003005 /* Views */,
+				4D0000010000000000003006 /* Intents */,
+				4D0000010000000000001010 /* Assets.xcassets */,
+			);
+			path = FinTrackApp;
+			sourceTree = "<group>";
+		};
+		4D0000010000000000003003 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4D0000010000000000001004 /* Payment.swift */,
+				4D0000010000000000001005 /* Bank.swift */,
+				4D0000010000000000001006 /* PaymentMethod.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4D0000010000000000003004 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				4D0000010000000000001002 /* FinTrackModelContainer.swift */,
+				4D0000010000000000001003 /* PaymentStore.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		4D0000010000000000003005 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D0000010000000000001007 /* RootView.swift */,
+				4D0000010000000000001008 /* TodayView.swift */,
+				4D0000010000000000001009 /* HistoryView.swift */,
+				4D000001000000000000100A /* DraftsView.swift */,
+				4D000001000000000000100B /* PlaceholderViews.swift */,
+				4D000001000000000000100C /* PaymentRowView.swift */,
+				4D000001000000000000100D /* PaymentDetailView.swift */,
+				4D000001000000000000100E /* DraftReviewView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4D0000010000000000003006 /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				4D000001000000000000100F /* RegisterApplePayPaymentIntent.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
+		4D0000010000000000003007 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D0000010000000000001000 /* FinTrackApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D0000010000000000004001 /* FinTrackApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D0000010000000000007002 /* Build configuration list for PBXNativeTarget "FinTrackApp" */;
+			buildPhases = (
+				4D0000010000000000002002 /* Sources */,
+				4D0000010000000000002001 /* Frameworks */,
+				4D0000010000000000002003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinTrackApp;
+			productName = FinTrackApp;
+			productReference = 4D0000010000000000001000 /* FinTrackApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D0000010000000000005001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					4D0000010000000000004001 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+				};
+			};
+			buildConfigurationList = 4D0000010000000000007001 /* Build configuration list for PBXProject "FinTrackApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D0000010000000000003001;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4D0000010000000000003007 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D0000010000000000004001 /* FinTrackApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D0000010000000000002003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D0000010000000000000010 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D0000010000000000002002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D0000010000000000000001 /* FinTrackApp.swift in Sources */,
+				4D0000010000000000000002 /* FinTrackModelContainer.swift in Sources */,
+				4D0000010000000000000003 /* PaymentStore.swift in Sources */,
+				4D0000010000000000000004 /* Payment.swift in Sources */,
+				4D0000010000000000000005 /* Bank.swift in Sources */,
+				4D0000010000000000000006 /* PaymentMethod.swift in Sources */,
+				4D0000010000000000000007 /* RootView.swift in Sources */,
+				4D0000010000000000000008 /* TodayView.swift in Sources */,
+				4D0000010000000000000009 /* HistoryView.swift in Sources */,
+				4D000001000000000000000A /* DraftsView.swift in Sources */,
+				4D000001000000000000000B /* PlaceholderViews.swift in Sources */,
+				4D000001000000000000000C /* PaymentRowView.swift in Sources */,
+				4D000001000000000000000D /* PaymentDetailView.swift in Sources */,
+				4D000001000000000000000E /* DraftReviewView.swift in Sources */,
+				4D000001000000000000000F /* RegisterApplePayPaymentIntent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4D0000010000000000006001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4D0000010000000000006002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D0000010000000000006003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FinTrack;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miguelgarciamarques.FinTrackApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Debug;
+		};
+		4D0000010000000000006004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FinTrack;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miguelgarciamarques.FinTrackApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D0000010000000000007001 /* Build configuration list for PBXProject "FinTrackApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D0000010000000000006001 /* Debug */,
+				4D0000010000000000006002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D0000010000000000007002 /* Build configuration list for PBXNativeTarget "FinTrackApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D0000010000000000006003 /* Debug */,
+				4D0000010000000000006004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4D0000010000000000005001 /* Project object */;
+}
